@@ -1,0 +1,98 @@
+1 уровень сложности: Оценить сложность алгоритма
+В нотации О-большое
+
+task #0
+let arr = [9, 3, 7, 4, 1, 2];
+alert(arr);
+for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr.length - i; j++) {
+    if (arr[j] > arr[j + 1]) {
+      let t = arr[j];
+      arr[j] = arr[j + 1];
+      arr[j + 1] = t;
+    }
+  }
+}
+alert(arr);
+
+Алгоритм сортировки пузырьком имеет квадратичную сложность O(n^2), где n - количество элементов в массиве. 
+В данном коде используются два вложенных цикла, что приводит к тому, что каждый элемент сравнивается со всеми остальными элементами массива. 
+Сложность O(n^2) говорит о том, что время выполнения алгоритма растет квадратично с увеличением количества элементов в массиве.
+===========
+The bubble sort algorithm has a quadratic complexity of O(n^2), where n is the number of elements in the array. 
+In this code, two nested loops are used, which means that each element is compared to all other elements in the array. 
+A complexity of O(n^2) means that the execution time of the algorithm grows quadratically with an increase in the number of elements in the array.
+
+________________________________________________________________________________________________________________________________
+
+task #1
+START
+READ number n
+IF n == 1 THEN return
+FOR i = 1, i <= n, i + 1
+  FOR j = 1; j <= n, j + 1
+    print "*"
+    BREAK
+    
+Данный алгоритм выводит звездочку для каждой пары значений i и j, где оба значения меньше или равны n. 
+Количество таких пар значений равно n^2.
+Поэтому сложность данного алгоритма можно определить как O(n^2), где n - это число, введенное пользователем.
+========
+This algorithm outputs an asterisk for each pair of values i and j, where both values are less than or equal to n.
+The number of such pairs of values is equal to n^2, so the complexity of this algorithm can be determined as O(n^2) 
+Where n is the number entered by the user.
+
+____________________________________________________________________________________________________________________________
+
+task #3
+START
+READ number n
+number a = 0
+FOR i = 0, i < n, i + 1
+  FOR j = n, j > i, j - 1
+    a = a + i + j
+END
+
+Данный алгоритм использует два вложенных цикла, которые выполняются от 0 до n и от n до i соответственно, где i - это индекс внешнего цикла. 
+Таким образом, общее количество итераций равно:
+
+(n + n) + (n - 1 + n - 1) + (n - 2 + n - 2) + ... + (2 + n - 2) + (1 + n - 1)
+
+Это арифметическая прогрессия, которую можно упростить до:
+
+n^2 + n(n-1) = n^2 + n^2 - n = 2n^2 - n
+
+Следовательно, сложность данного алгоритма можно записать как O(n^2), где n - это число, введенное пользователем.
+
+=======
+
+This algorithm uses two nested loops that run from 0 to n and from n to i respectively. 
+Where i is the index of the outer loop. Thus, the total number of iterations is:
+
+(n + n) + (n - 1 + n - 1) + (n - 2 + n - 2) + ... + (2 + n - 2) + (1 + n - 1)
+
+This is an arithmetic progression, which can be simplified to:
+
+n^2 + n(n-1) = n^2 + n^2 - n = 2n^2 - n
+
+Therefore, the complexity of this algorithm can be expressed as O(n^2) 
+where n is the number entered by the user.
+_____________________________________________________________________________________________________________________
+
+task #4
+START
+READ number n
+numbers a = 0, i = n
+WHILE i > 0
+  a = a + i
+  i = i / 2
+END
+
+В данном алгоритме происходит деление переменной i на 2 в каждой итерации цикла, пока i не станет равным 0. 
+Это означает, что количество итераций цикла будет логарифмическим по основанию 2. 
+Таким образом, сложность данного алгоритма можно записать как O(log n), где n - это число, введенное пользователем.
+======================
+In this algorithm, the variable i is divided by 2 in each iteration of the loop until i becomes equal to 0. 
+This means that the number of iterations of the loop will be logarithmic with a base of 2. 
+Thus, the complexity of this algorithm can be expressed as O(log n), where n is the number entered by the user.
+
